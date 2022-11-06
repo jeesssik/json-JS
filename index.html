@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="pepito"></p> <!-- en este párrafo vacío vamos a cargar la data que levanto del json-->
+
+
+    <script>
+        // el fetch busca el archivo que tiene la data que queremos leer
+        fetch('./data.json')
+            // el .then lo que hace es recibir la data del archivo y lo formatea a json con el response.json()
+            .then((response) => response.json())
+            .then((json) => {
+                
+                        //console.log(json.title);  //carga la data en consola del explorador
+                        
+                        document.getElementById("pepito").innerHTML=json.title;  // identifico al id del elemento en donde quiero mostrar data, e indico cuál va a ser su contenido HTML
+            
+            });
+
+/*
+            
+        fetch('./data2.json')
+        .then((response) => response.json())
+        //acá tenemos que recorrer un array de objetos
+        .then((json) => {
+                    
+                    //consulto el titulo del objeto 2
+                    console.log(json.sarasa[1].title)
+                    // recorro el array de objetos y muestro el titulo de cada uno en la consola
+                    for (let i = 0; i < json.sarasa.length; i++) {
+                        console.log("El titulo del objeto "+i+" es: "+json.sarasa[i].title)
+                    }
+
+        });
+*/
+    </script>
+</body>
+</html>
