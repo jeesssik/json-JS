@@ -1,19 +1,14 @@
-
 {
-    "sarasa":
-    [
-        {
-        "id": 1,
-        "title": "Hello World",
-        "completed": false
+  "sarasa": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "completed": false
     },
     {
-        "id": 2,
-        "title": "Goodbye my old friend",
-        "completed": false
+      "id": 2,
+      "title": "Goodbye my old friend",
+      "completed": false
     }
-
-
-]
-    
+  ]
 }
