@@ -8,10 +8,21 @@
 </head>
 <body>
 
+    <h1>Levanto data del JSON simple</h1>
     <p id="pepito"></p> <!-- en este párrafo vacío vamos a cargar la data que levanto del json-->
 
 
+    <br>
+    <h1>Levanto data del JSON complejo</h1>
+       
+    <ul id="lista">
+    </ul>
+
+
     <script>
+        
+         /*********************JSON COMPLEJO *******************/   
+
         // el fetch busca el archivo que tiene la data que queremos leer
         fetch('./data.json')
             // el .then lo que hace es recibir la data del archivo y lo formatea a json con el response.json()
@@ -24,8 +35,8 @@
             
             });
 
-/*
-            
+
+         /*********************JSON COMPLEJO *******************/   
         fetch('./data2.json')
         .then((response) => response.json())
         //acá tenemos que recorrer un array de objetos
@@ -33,13 +44,18 @@
                     
                     //consulto el titulo del objeto 2
                     console.log(json.sarasa[1].title)
+                    
                     // recorro el array de objetos y muestro el titulo de cada uno en la consola
                     for (let i = 0; i < json.sarasa.length; i++) {
-                        console.log("El titulo del objeto "+i+" es: "+json.sarasa[i].title)
+                        console.log("El titulo del objeto "+i+" es: "+json.sarasa[i].title);
+
+                        const li =document.createElement('li')
+                        li.innerHTML= "El titulo del objeto "+i+" es: "+json.sarasa[i].title
+                        document.getElementById("lista").appendChild(li)
                     }
 
         });
-*/
+
     </script>
 </body>
 </html>
