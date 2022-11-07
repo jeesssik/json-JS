@@ -44,13 +44,16 @@
                     
                     //consulto el titulo del objeto 2
                     console.log(json.sarasa[1].title)
-                    
+
                     // recorro el array de objetos y muestro el titulo de cada uno en la consola
                     for (let i = 0; i < json.sarasa.length; i++) {
                         console.log("El titulo del objeto "+i+" es: "+json.sarasa[i].title);
 
+                        //creo un elemento html del tipo li
                         const li =document.createElement('li')
+                        //le doy contenido al li que acabo de crear
                         li.innerHTML= "El titulo del objeto "+i+" es: "+json.sarasa[i].title
+                        //le agrego el li creado al elemento del html que tiene el ID "lista"
                         document.getElementById("lista").appendChild(li)
                     }
 
