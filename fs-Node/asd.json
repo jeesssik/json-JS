@@ -1,0 +1,6 @@
+{
+  "nombre": "Juan",
+  "apellido": "Perez",
+  "nuevoCampo": "Nuevo valor",
+  "nuevaPropiedad": 42
+}
